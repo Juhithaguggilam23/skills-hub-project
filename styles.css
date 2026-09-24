@@ -1,0 +1,764 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef3f8;
+    color: #172033;
+    padding: 50px;
+}
+
+
+/* ================= MAIN GRID ================= */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr 1fr;
+
+    grid-template-rows:
+        230px
+        175px
+        175px;
+
+    gap: 18px;
+}
+
+
+/* ================= COMMON CARD ================= */
+
+.card {
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ================= CARD 1 ================= */
+
+.hero-small {
+
+    grid-column: 1;
+    grid-row: 1;
+
+    background: #d9f2e6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-small h2 {
+
+    font-size: 31px;
+    line-height: 0.95;
+    font-weight: 600;
+
+}
+
+.hero-small h2 span {
+
+    color: #168c69;
+    font-style: italic;
+
+}
+
+.pill {
+
+    width: fit-content;
+
+    background: #168c69;
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+
+/* ================= CARD 2 ================= */
+
+.main-hero {
+
+    grid-column: 2 / 4;
+    grid-row: 1;
+
+    background: #263b73;
+
+    color: white;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.main-hero h1 {
+
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 600;
+
+}
+
+.main-hero h1 span {
+
+    color: #8ee0bd;
+    font-style: italic;
+
+}
+
+.stars {
+
+    color: #ffd86a;
+
+    font-size: 20px;
+
+    letter-spacing: 5px;
+
+    margin-top: 18px;
+
+}
+
+.main-hero p {
+
+    font-size: 12px;
+
+    margin-top: 8px;
+
+}
+
+
+/* ================= CARD 3 ================= */
+
+.career-card {
+
+    grid-column: 4;
+    grid-row: 1 / 3;
+
+    background: #dcd5f7;
+
+}
+
+.career-card h2 {
+
+    font-size: 25px;
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+}
+
+
+/* ================= PROGRESS BOX ================= */
+
+.career-box {
+
+    position: absolute;
+
+    top: 92px;
+
+    left: 18px;
+    right: 18px;
+
+    background: white;
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+}
+
+.box-title {
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-bottom: 13px;
+
+}
+
+.progress-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+
+    margin-top: 9px;
+
+}
+
+.progress {
+
+    height: 6px;
+
+    background: #e8eaf0;
+
+    border-radius: 10px;
+
+    margin-top: 5px;
+
+    overflow: hidden;
+
+}
+
+.progress-fill {
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    background: #5268c9;
+
+}
+
+.progress-fill.one {
+    width: 85%;
+}
+
+.progress-fill.two {
+    width: 65%;
+}
+
+.progress-fill.three {
+    width: 75%;
+}
+
+.bottom-text {
+
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+
+    bottom: 18px;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+}
+
+
+/* ================= CARD 4 ================= */
+
+.learning-card {
+
+    grid-column: 1;
+
+    grid-row: 2 / 4;
+
+    background: #ffd36b;
+
+}
+
+.learning-card h2 {
+
+    font-size: 28px;
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+}
+
+
+/* ================= CHAT ================= */
+
+.chat {
+
+    position: absolute;
+
+    left: 17px;
+    right: 17px;
+
+    bottom: 17px;
+
+    height: 125px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+}
+
+.question {
+
+    background: #f2f4f7;
+
+    border-radius: 8px;
+
+    padding: 8px;
+
+    font-size: 8px;
+
+    margin-bottom: 10px;
+
+}
+
+.answer {
+
+    display: flex;
+
+    gap: 7px;
+
+    font-size: 8px;
+
+    line-height: 1.3;
+
+}
+
+.spark {
+
+    width: 18px;
+    height: 18px;
+
+    min-width: 18px;
+
+    border-radius: 50%;
+
+    background: #5268c9;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.arrow {
+
+    position: absolute;
+
+    right: -2px;
+
+    bottom: 15px;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #ffd36b;
+
+    border: 4px solid white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #263b73;
+
+    font-weight: bold;
+
+}
+
+
+/* ================= CARD 5 ================= */
+
+.skills-card {
+
+    grid-column: 2;
+
+    grid-row: 2;
+
+    background: #ffffff;
+
+}
+
+.icons {
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+.icons span {
+
+    padding: 8px 10px;
+
+    background: #edf1f5;
+
+    border-radius: 8px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+}
+
+.skills-card h2 {
+
+    font-size: 23px;
+
+    line-height: 0.95;
+
+    margin-top: 15px;
+
+}
+
+
+/* ================= CARD 6 ================= */
+
+.roadmap-card {
+
+    grid-column: 3;
+
+    grid-row: 2;
+
+    background: #f3b8a6;
+
+}
+
+.roadmap-card h2 {
+
+    font-size: 23px;
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+}
+
+
+/* ================= ROADMAP ================= */
+
+.roadmap {
+
+    position: absolute;
+
+    left: 17px;
+    right: 17px;
+
+    bottom: 17px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+.roadmap-head {
+
+    background: #5268c9;
+
+    color: white;
+
+    padding: 8px;
+
+    font-size: 8px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.steps {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    padding: 11px;
+
+}
+
+.step {
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #e7e9ef;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8px;
+
+}
+
+.step.active {
+
+    background: #5268c9;
+
+    color: white;
+
+}
+
+
+/* ================= CARD 7 ================= */
+
+.stats-card {
+
+    grid-column: 2;
+
+    grid-row: 3;
+
+    background: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.stat-number {
+
+    font-size: 43px;
+
+    font-weight: 600;
+
+}
+
+.stats-card p {
+
+    font-size: 11px;
+
+    margin-top: 7px;
+
+}
+
+.people {
+
+    color: #5268c9;
+
+    font-size: 22px;
+
+    letter-spacing: 5px;
+
+    margin-top: 17px;
+
+}
+
+
+/* ================= CARD 8 ================= */
+
+.projects-card {
+
+    grid-column: 3 / 5;
+
+    grid-row: 3;
+
+    background: #5268c9;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.projects-card h2 {
+
+    font-size: 29px;
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+}
+
+.projects-card p {
+
+    font-size: 11px;
+
+    margin-top: 10px;
+
+    max-width: 230px;
+
+    line-height: 1.3;
+
+}
+
+
+/* ================= PROJECT CHART ================= */
+
+.project-chart {
+
+    width: 150px;
+
+    height: 130px;
+
+    background: white;
+
+    color: #172033;
+
+    border-radius: 12px;
+
+    padding: 13px;
+
+}
+
+.project-chart small {
+
+    display: block;
+
+    font-size: 8px;
+
+    color: #888;
+
+}
+
+.project-chart strong {
+
+    display: block;
+
+    font-size: 22px;
+
+    margin-top: 3px;
+
+}
+
+
+/* ================= BARS ================= */
+
+.bars {
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 7px;
+
+    margin-top: 8px;
+
+}
+
+.bars span {
+
+    width: 13px;
+
+    background: #5268c9;
+
+    border-radius: 7px 7px 0 0;
+
+}
+
+.bars span:nth-child(1) {
+    height: 23px;
+}
+
+.bars span:nth-child(2) {
+    height: 32px;
+}
+
+.bars span:nth-child(3) {
+    height: 40px;
+}
+
+.bars span:nth-child(4) {
+    height: 55px;
+}
+
+.bars span:nth-child(5) {
+    height: 47px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .container {
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: auto;
+
+    }
+
+    .hero-small,
+    .main-hero,
+    .career-card,
+    .learning-card,
+    .skills-card,
+    .roadmap-card,
+    .stats-card,
+    .projects-card {
+
+        grid-column: auto;
+
+        grid-row: auto;
+
+        min-height: 260px;
+
+    }
+
+    .main-hero,
+    .projects-card {
+
+        grid-column: span 2;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .main-hero,
+    .projects-card {
+
+        grid-column: auto;
+
+    }
+
+    body {
+
+        padding: 10px;
+
+    }
+
+}
